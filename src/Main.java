@@ -1,6 +1,6 @@
 package src;
 
-import java.util.Scanner;
+import java.util.Scanner; // Import the Scanner class for reading user inputs
 
 // Main class to execute project's code
 public class Main {
@@ -20,11 +20,22 @@ public class Main {
         System.out.println("Please enter " + n + " temperature values:");
         for (int i = 0; i < n; i++) {
             System.out.print("Temperature " + (i + 1) + ": ");
-            temperatures[i] = scanner.nextDouble();  // store each input
+            temperatures[i] = scanner.nextDouble();  // Store each input
         }
 
-        // Just a confirmation
-        System.out.println("Temperatures successfully recorded!");
+        // Compute the sum of all the temperatures
+        double sum = 0;
+        for (double temp : temperatures) {
+            sum += temp; // Accumulate the total sum
+        }
+
+        // Calculate the average temperature
+        double average = sum / n;
+
+        // Print the results
+        System.out.println("Temperatures successfully recorded!"); // Confirmation message
+        System.out.println("Average temperature is: " + average); // Print out average
+        
 
     }
 }
